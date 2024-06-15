@@ -1,5 +1,12 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnDestroy,
+  OnInit,
+  Output,
+} from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -8,11 +15,15 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   templateUrl: './child.component.html',
   styleUrl: './child.component.css',
 })
-export class ChildComponent {
+export class ChildComponent implements OnInit, OnDestroy {
   @Input() items: string[] = [];
   @Output() itemDeleted = new EventEmitter<number>();
 
   deleteIndex(index: number) {
     this.itemDeleted.emit(index);
   }
+
+  ngOnInit(): void {}
+
+  ngOnDestroy(): void {}
 }
