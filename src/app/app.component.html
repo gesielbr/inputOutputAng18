@@ -1,3 +1,7 @@
 <h2>Parent Component</h2>
 <button (click)="addItem()">Adicionar item</button>
-<app-child [items]="itemsArr"></app-child>
+<app-child
+  *ngIf="itemsArr.length > 0"
+  [items]="itemsArr"
+  (itemDeleted)="deleteItem($event)"
+></app-child>

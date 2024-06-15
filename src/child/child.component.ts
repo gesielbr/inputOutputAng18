@@ -23,7 +23,11 @@ export class ChildComponent implements OnInit, OnDestroy {
     this.itemDeleted.emit(index);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log('Child Component is initialized');
+  }
 
-  ngOnDestroy(): void {}
+  ngOnDestroy(): void {
+    console.log('Child Component is destroyd');
+  }
 }
