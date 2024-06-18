@@ -1,0 +1,16 @@
+.container {
+  margin: 1rem auto;
+  background-color: #caf0f8;
+  border-radius: 10px;
+  padding: 2rem;
+  font-size: clamp(0.75rem, 0.6667rem + 0.4444vw, 1rem);
+  .title {
+    font-size: clamp(1rem, 0.7917rem + 1.1111vw, 1.625rem);
+  }
+}
+
+.btn-delete {
+  padding: 0;
+  line-height: 0;
+  margin-left: 0.5rem;
+}

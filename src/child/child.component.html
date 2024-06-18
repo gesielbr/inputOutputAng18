@@ -1,9 +1,20 @@
-<div>
-  <h3>Child Compoent</h3>
-  <ul>
-    <li *ngFor="let item of items; let i = index">
-      {{ item }}
-      <button type="button" (click)="deleteIndex(i)">Delete</button>
-    </li>
-  </ul>
+<div class="container">
+  <div class="row gy-2 child-element">
+    <div class="col">
+      <h3 class="title">Componente Filho</h3>
+    </div>
+    <div class="col-12" *ngFor="let item of items; let i = index">
+      <p>
+        {{ item }}
+        <button
+          class="btn btn-danger btn-delete"
+          type="button"
+          (click)="deleteIndex(i)"
+          title="Deletar item"
+        >
+          <span class="material-symbols-outlined"> delete </span>
+        </button>
+      </p>
+    </div>
+  </div>
 </div>
