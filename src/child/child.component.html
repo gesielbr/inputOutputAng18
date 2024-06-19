@@ -1,16 +1,20 @@
 <div class="container">
   <div class="row gy-2 child-element">
-    <div class="col">
+    <div class="col text-center text-md-start">
       <h3 class="title">Componente Filho</h3>
+      <p>* Itens recuperados do componente pai</p>
     </div>
-    <div class="col-12" *ngFor="let item of items; let i = index">
-      <p>
+    <div
+      class="col-12 text-center text-md-start"
+      *ngFor="let item of items; let i = index"
+    >
+      <p class="item d-flex justify-content-between">
         {{ item }}
         <button
           class="btn btn-danger btn-delete"
           type="button"
           (click)="deleteIndex(i)"
-          title="Deletar item"
+          title="Deletar item e atualizar dados no componente pai"
         >
           <span class="material-symbols-outlined"> delete </span>
         </button>

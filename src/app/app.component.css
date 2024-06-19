@@ -5,11 +5,15 @@
   background-color: #00b4d8;
   .parent-element {
     .title {
-      font-size: clamp(1rem, 0.7083rem + 1.5556vw, 1.875rem);
+      font-size: clamp(1rem, 0.7917rem + 1.1111vw, 1.625rem);
       margin-bottom: 1rem;
+      color: #fff;
     }
     .ng-destoy-info {
       margin: 0;
+      background-color: azure;
+      padding: 0.75rem;
+      border-radius: 10px;
     }
   }
 }
